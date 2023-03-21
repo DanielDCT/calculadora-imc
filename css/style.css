@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    }
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.615) 20%, #1b273397 90%),url(../img/banner.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    }
+    
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    }
+    
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    }
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    }
+    
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+    }
+    
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+    }
+    
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    }
+    
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+    }
+    
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+    }
+    
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+    }
+    
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    }
+    
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+    }
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.form-box {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+h2 {
+    text-align: center;
+    color: #0fb2ed;
+    font-size: 2em;
+    padding: 15px;
+    letter-spacing: 2px;
+    font-family: 'Permanent Marker', cursive;
+    }
+
+.form-contend {
+    display: flex;
+    border: 2px solid #0fb2ed;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    width: 600px;
+    height: 340px;
+    }
+
+.cont-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    }
+
+img {
+    width: 250px;
+    height: 335px;
+    object-fit: cover;
+    transform: scaleX(-1);
+    opacity: 0.8;
+    }
+
+.cont-inputs {
+    width: 325px;
+    }
+    
+.input-box {
+    position: relative;
+    margin: 30px 10px;
+    width: 100%;
+    border-bottom: 2px solid #0fb2ed;
+    }
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #0fb2ed;
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+    }
+
+sup {
+    text-transform: uppercase;
+    font-size: .7em;
+    }
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    }
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #0fb2ed;   
+    }
+    
+.btn {
+    width: 100%;
+    height: 40px;
+    margin: 5px 10px 0 10px;
+    background-color: #0fb2ed;
+    color: black;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    }
+
+.btn:hover {
+    border-radius: 5px;
+    background-color: rgb(0, 124, 174);
+    color: aliceblue;
+    }
+
+#resultado {
+    color: #0fb2ed;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid #0fb2ed;
+    width: 100%;
+    height: 40px;
+    margin: 30px 10px;
+    text-align: center;
+    }
+
+@media (max-width: 600px){
+    .form-contend {
+        width: 290px;
+        height: 435px;
+        flex-direction: column;
+        }
+
+    h2 {
+        font-size: 1.2em;
+        }
+
+    img {
+        width: 285px;
+        height: 185px;
+        }
+
+    .cont-inputs {
+        width: 265px;
+        }
+        
+    .input-box {
+        position: relative;
+        margin: 15px 10px;
+        }
+
+    .input-box label {
+        font-size: .9em;
+        }
+
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+        top: 5px;
+        }
+
+    .input-box input {
+        font-size: .9em; 
+        }
+
+    #resultado {
+        font-size: 12px;
+        height: 30px;
+        margin: 10px 10px;
+        }
+    }
+
+@media (max-width: 991px) and (max-height:321px){
+    
+    h2 {
+        font-size: 1.2em;
+        }
+    
+    .form-contend {
+        width: 600px;
+        height: 230px;
+        }
+    
+    img {
+        width: 250px;
+        height: 225px;
+        }
+    
+    .cont-inputs {
+        width: 325px;
+        }
+        
+    .input-box {
+        margin: 18px 10px;
+        }
+    
+    .input-box label {
+        font-size: .9em;
+        }
+    
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+        top: 0px;
+        }
+    
+    .input-box input {
+        height: 40px;
+        font-size: .9em; 
+        }
+
+    #resultado {
+        font-size: 14px;
+        height: 30px;
+        margin: 10px 10px;
+        }
+    }

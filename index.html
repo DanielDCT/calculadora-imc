@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" lang="es" content="Calderón Tinjaca Daniel David">
+    <meta name="keywords" content="calculadora corporal, imc, indice de masa corporal, masa, peso">
+    <meta name="description" content="Calcula tu índice de masa corporal en segundos.">
+    <meta name="copyright" content="Copyright Daniel David Calderón Tinjaca"> 
+    <link rel="shortcut icon" href="img/logo-portafolio.png" type="image/png" /> 
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Indice de masa corporal</title>
+</head>
+<body>
+
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+
+    <div class="form-box">
+        <h2>Indicice de Masa Corporal</h2>
+
+        <div class="form-contend">
+            <div class="cont-img">
+                <img src="img/img-imc.jpg">
+            </div>
+
+            <form id="formulario" onsubmit="calcularIMC(); return false">
+                <div class="cont-inputs">
+                    <div class="input-box">
+                        <input type="text" name="altura" id="altura" autocomplete="off" required="required">
+                        <label for="altura">Altura <sup>cm</sup></label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="peso" id="peso" autocomplete="off" required="required">
+                        <label for="peso">Peso <sup>kg</sup></label>
+                    </div>
+
+                    <button type="submit" class="btn">Calcular IMC</button>
+                    <p id="resultado"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/function.js"></script>
+</body>
+</html>
